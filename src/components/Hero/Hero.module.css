@@ -1,9 +1,19 @@
 ﻿.hero {
   position: relative;
 }
+/* Fills the first screen below the navbar. */
 .upper {
   position: relative;
+  display: flex;
+  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h));
   padding: var(--space-6) var(--space-4) var(--space-5);
+}
+.upper > .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 .dots {
   position: absolute;
@@ -25,7 +35,8 @@
   margin-bottom: var(--space-3);
 }
 .name {
-  font-size: clamp(56px, 9vw, 120px);
+  font-size: clamp(56px, 10vw, 140px);
+  margin-block: auto;
   line-height: 0.98;
   color: var(--cobalt);
   letter-spacing: -0.02em;
@@ -41,11 +52,28 @@
   display: inline-block;
   transform-origin: 0 0;
 }
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+  width: 100%;
+}
 .tagline {
-  margin-top: var(--space-3);
   font-size: 20px;
   font-weight: 600;
   max-width: 560px;
+}
+.links {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+}
+.links :global(.btn) {
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.links :global(.btn):hover {
+  box-shadow: 4px 4px 0 var(--cobalt);
 }
 .slab {
   background: var(--cobalt);
@@ -121,6 +149,9 @@
 }
 .tagline {
   --i: 3;
+}
+.links {
+  --i: 4;
 }
 .slab {
   --i: 4;

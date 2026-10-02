@@ -1,4 +1,4 @@
-﻿import { hero, profile } from '../../data/content';
+﻿import { hero, profile, ui } from '../../data/content';
 import Avatar from '../Avatar/Avatar';
 import styles from './Hero.module.css';
 
@@ -23,7 +23,26 @@ export default function Hero() {
               </span>
             ))}
           </h1>
-          <p className={`enter ${styles.tagline}`}>{profile.tagline}</p>
+          <div className={styles.foot}>
+            <p className={`enter ${styles.tagline}`}>{profile.tagline}</p>
+            <ul className={`enter ${styles.links}`}>
+              <li>
+                <a className="btn" href={profile.github} target="_blank" rel="noreferrer">
+                  {ui.github} ↗
+                </a>
+              </li>
+              <li>
+                <a className="btn" href={profile.linkedin} target="_blank" rel="noreferrer">
+                  {ui.linkedin} ↗
+                </a>
+              </li>
+              <li>
+                <a className="btn" href={`mailto:${profile.email}`}>
+                  {ui.email} ↗
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className={`enter ${styles.slab}`}>
