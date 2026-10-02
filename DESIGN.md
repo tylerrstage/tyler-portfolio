@@ -82,7 +82,9 @@ A water drop falls onto a glossy blue surface, ripples spread, and the ripples r
 4. **1.1 to 1.7 s:** The page's own blueprint grid draws in from the center and stays, and the name appears in the display font, as if developed from the ripple.
 5. **1.9 to 3.0 s:** The intro's drawings fade out while the page content enters. The name's letters fly from the intro's single centered line to their places in the two-line hero name, one after another (0.8 s each, 25 ms apart). If the intro is skipped, the hero name uses the regular entrance instead.
 
-**Page entrance.** At the handoff the navbar slides down and the hero pieces rise in with a short stagger (status chip, name, tagline, slab, buttons, stats, avatar), followed by the sections. The same entrance plays on loads where the intro is skipped for the session; under reduced motion everything is simply shown.
+**Page entrance.** At the handoff the navbar slides down and the hero pieces rise in with a short stagger (status chip, name, tagline, slab, buttons, stats, avatar), followed by the footer. The same entrance plays on loads where the intro is skipped for the session; under reduced motion everything is simply shown.
+
+**Scroll reveal.** Below the hero, each section's label, title, caption, and content blocks (windows, skill panels, the contact panel) fade and rise 16px into place the first time they scroll into view, with a short stagger between neighbours. It plays once per element, waits for the intro handoff, and is off under reduced motion. Project cards use their Boot animation instead.
 
 **Rules**
 
@@ -162,7 +164,7 @@ The Boot project card is the centerpiece; the rest are supporting pieces. The ca
 
 ### Boot project card
 
-Until it is 25% in view, a card shows as a faded wireframe. Then a boot panel covers it, three lines type out, a progress bar fills over about 0.8 seconds, and the card content appears.
+Until it is 25% in view, a card shows as a dimmed, idle boot panel that already covers its content (under reduced motion, a faded wireframe instead). Then the panel lights up, three lines type out, a progress bar fills over about 0.8 seconds, and the card content appears.
 
 - **Boot lines:** `> mount PRJ-01`, `> read sector 2F ... ok`, `> render card ...`
 - **Anatomy, top to bottom:** blue strip (project code and status), screenshot slot at 16:10, title, one-line summary, stack chips, three bullets, a GitHub button, and a Reboot button that replays the boot.

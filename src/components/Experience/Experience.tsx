@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <SectionFrame id="experience" sheet={sheets.experience}>
       {roles.map((r) => (
-        <article key={r.title + r.org} className="window">
+        <article key={r.title + r.org} className="window reveal">
           <div className="windowBar" aria-hidden="true">
             <span>{ui.experienceWindow}</span>
             <span>

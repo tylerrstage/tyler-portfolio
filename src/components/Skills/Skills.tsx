@@ -1,4 +1,5 @@
-﻿import { sheets, skills } from '../../data/content';
+﻿import type { CSSProperties } from 'react';
+import { sheets, skills } from '../../data/content';
 import SectionFrame from '../SectionFrame/SectionFrame';
 import styles from './Skills.module.css';
 
@@ -7,7 +8,11 @@ export default function Skills() {
     <SectionFrame id="skills" sheet={sheets.skills}>
       <div className={styles.grid}>
         {skills.map((g, i) => (
-          <div key={g.label} className={styles.cart}>
+          <div
+            key={g.label}
+            className={`reveal ${styles.cart}`}
+            style={{ '--i': i } as CSSProperties}
+          >
             <div className={styles.notch} aria-hidden="true">
               <span>{String(i + 1).padStart(2, '0')}</span>
               <i />

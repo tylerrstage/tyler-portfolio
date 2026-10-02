@@ -1,4 +1,6 @@
-﻿import type { ReactNode } from 'react';
+import { useRef } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
+import { useReveal } from '../../hooks/useReveal';
 import styles from './SectionFrame.module.css';
 
 interface Props {
@@ -8,20 +10,29 @@ interface Props {
 }
 
 export default function SectionFrame({ id, sheet, children }: Props) {
+  const ref = useRef<HTMLElement>(null);
+  useReveal(ref);
+
   return (
-    <section id={id} className={`enter ${styles.section}`} aria-labelledby={`${id}-title`}>
+    <section ref={ref} id={id} className={styles.section} aria-labelledby={`${id}-title`}>
       <div className={styles.sheet}>
         <i className={`${styles.corner} ${styles.tl}`} aria-hidden="true" />
         <i className={`${styles.corner} ${styles.tr}`} aria-hidden="true" />
         <i className={`${styles.corner} ${styles.bl}`} aria-hidden="true" />
         <i className={`${styles.corner} ${styles.br}`} aria-hidden="true" />
-        <p className={styles.label}>
+        <p className={`reveal ${styles.label}`}>
           Sheet {sheet.n} / {sheet.label}
         </p>
-        <h2 id={`${id}-title`} className={styles.title}>
+        <h2
+          id={`${id}-title`}
+          className={`reveal ${styles.title}`}
+          style={{ '--i': 1 } as CSSProperties}
+        >
           {sheet.title}
         </h2>
-        <p className={styles.caption}>{sheet.caption}</p>
+        <p className={`reveal ${styles.caption}`} style={{ '--i': 2 } as CSSProperties}>
+          {sheet.caption}
+        </p>
         {children}
       </div>
     </section>

@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <SectionFrame id="contact" sheet={sheets.contact}>
-      <ul className={styles.rows}>
+      <ul className={`reveal ${styles.rows}`}>
         <li>
           <span className={styles.label}>{ui.email}</span>
           <span className={styles.value}>{profile.email}</span>

@@ -1,4 +1,5 @@
-﻿import { about, education, sheets, ui } from '../../data/content';
+﻿import type { CSSProperties } from 'react';
+import { about, education, sheets, ui } from '../../data/content';
 import SectionFrame from '../SectionFrame/SectionFrame';
 import styles from './About.module.css';
 
@@ -6,8 +7,8 @@ export default function About() {
   return (
     <SectionFrame id="about" sheet={sheets.about}>
       <div className={styles.grid}>
-        <p className={styles.bio}>{about.bio}</p>
-        <div className="window">
+        <p className={`reveal ${styles.bio}`}>{about.bio}</p>
+        <div className="window reveal" style={{ '--i': 1 } as CSSProperties}>
           <div className="windowBar" aria-hidden="true">
             <span>{ui.educationWindow}</span>
           </div>

@@ -8,7 +8,7 @@ export default function ResumeView() {
   const h = ui.resumeHeadings;
   return (
     <SectionFrame id="resume" sheet={sheets.resume}>
-      <div className="window">
+      <div className="window reveal">
         <div className="windowBar">
           <span>{ui.resumeWindow}</span>
           <a className="btn" href={profile.resumePdf} download>

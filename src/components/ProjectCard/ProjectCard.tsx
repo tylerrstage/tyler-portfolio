@@ -85,6 +85,8 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   const booting = phase === 'typing' || phase === 'filling';
   const busy = booting || phase === 'reveal';
+  // The boot panel also covers the waiting card, so its content never shows before the boot.
+  const covered = booting || (phase === 'wire' && !reduced);
 
   return (
     <article
@@ -139,7 +141,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      {booting && (
+      {covered && (
         <div className={styles.boot} aria-hidden="true">
           <pre>
             {text.slice(0, typed)}

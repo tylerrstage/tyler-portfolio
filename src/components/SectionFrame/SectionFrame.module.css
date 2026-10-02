@@ -1,6 +1,5 @@
 ﻿.section {
   padding: var(--space-6) var(--space-4) 0;
-  --i: 8;
 }
 .sheet {
   position: relative;
