@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
 }
 .dot {
   width: 8px;

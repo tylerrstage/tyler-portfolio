@@ -21,7 +21,7 @@
   background: var(--cobalt);
   color: var(--panel);
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
   padding: 4px 12px;
   border-bottom: 2px solid var(--ink);
 }
@@ -58,6 +58,7 @@
 }
 .pending {
   font-family: var(--font-utility);
+  font-size: 20px;
   color: var(--cobalt);
   border: 1.5px dashed var(--cobalt);
   padding: 4px 12px;
@@ -85,6 +86,7 @@
   background: var(--ink);
   color: var(--panel);
   font-family: var(--font-utility);
+  font-size: 20px;
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -95,7 +97,6 @@
 .boot pre {
   margin: 0;
   font: inherit;
-  font-size: 16px;
   min-height: 4.5em;
   white-space: pre-wrap;
 }

@@ -15,6 +15,7 @@
 }
 .label {
   font-family: var(--font-utility);
+  font-size: 20px;
   color: var(--cobalt);
 }
 .value {

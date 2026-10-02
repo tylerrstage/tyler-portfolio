@@ -70,6 +70,7 @@ section[id] {
   color: var(--panel);
   padding: 8px 12px;
   font-family: var(--font-utility);
+  font-size: 20px;
 }
 .skip-link:focus {
   top: 8px;
@@ -83,7 +84,8 @@ section[id] {
 }
 .chips li {
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.2;
   padding: 1px 8px;
   border: 1px solid var(--cobalt);
   background: var(--panel);
@@ -121,7 +123,7 @@ section[id] {
 .btn {
   display: inline-block;
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.4;
   padding: 6px 16px;
   border: 2px solid var(--ink);
@@ -156,12 +158,11 @@ section[id] {
   background: var(--ink);
   color: var(--panel);
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
 }
 .windowBar .btn {
   border-color: var(--panel);
   padding: 2px 12px;
-  font-size: 14px;
 }
 .windowBar :focus-visible {
   outline-color: var(--panel);
@@ -186,7 +187,7 @@ section[id] {
   justify-content: space-between;
   padding: var(--space-3) var(--space-4);
   font-family: var(--font-utility);
-  font-size: 16px;
+  font-size: 20px;
 }
 .footer a {
   color: var(--ink);
