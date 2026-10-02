@@ -1,5 +1,4 @@
 ﻿import '@fontsource/unbounded/latin-800.css';
-import '@fontsource/dotgothic16/latin-400.css';
 import '@fontsource/ibm-plex-sans/latin-400.css';
 import '@fontsource/ibm-plex-sans/latin-600.css';
 import './styles/tokens.css';

@@ -18,7 +18,7 @@
 .chip {
   display: inline-block;
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: 16px;
   padding: 2px 10px;
   border: var(--line);
   background: var(--panel);
@@ -61,7 +61,7 @@
 .primary,
 .ghost {
   font-family: var(--font-utility);
-  font-size: 17px;
+  font-size: 16px;
   padding: 10px 20px;
   text-decoration: none;
   border: 2px solid var(--panel);
@@ -91,7 +91,7 @@
 }
 .stats span {
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   margin-top: 4px;
 }

@@ -21,7 +21,7 @@
   background: var(--cobalt);
   color: var(--panel);
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 2px solid var(--ink);
 }
 .notch i {

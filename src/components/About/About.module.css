@@ -17,7 +17,7 @@
 }
 .place {
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: 16px;
 }
 .degree {
   font-weight: 600;
@@ -34,7 +34,7 @@
 .facts dt,
 .label {
   font-family: var(--font-utility);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--cobalt);
 }
 .facts dd {
