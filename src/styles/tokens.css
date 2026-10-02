@@ -1,0 +1,23 @@
+﻿:root {
+  --paper: #eef0f4;
+  --panel: #f9fbff;
+  --ink: #0e2468;
+  --cobalt: #2c6bf2;
+  --cyan: #46c6f2;
+  --red: #e8574f;
+  --yellow: #f3b72f;
+  --green: #4fae6a;
+
+  --font-display: 'Unbounded', sans-serif;
+  --font-utility: 'DotGothic16', monospace;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --nav-h: 56px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 72px;
+  --line: 1.5px solid var(--cobalt);
+}

@@ -1,0 +1,18 @@
+﻿.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-utility);
+  font-size: 14px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 2px var(--ink);
+}
+.clock {
+  border-left: 1.5px solid var(--cobalt);
+  padding-left: 8px;
+}

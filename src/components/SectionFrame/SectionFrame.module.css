@@ -1,0 +1,54 @@
+﻿.section {
+  padding: var(--space-6) var(--space-4) 0;
+}
+.sheet {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+.corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 0 dashed var(--cobalt);
+}
+.tl {
+  top: 0;
+  left: 0;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.tr {
+  top: 0;
+  right: 0;
+  border-top-width: 1.5px;
+  border-right-width: 1.5px;
+}
+.bl {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.br {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+.label {
+  font-family: var(--font-utility);
+  font-size: 14px;
+  color: var(--cobalt);
+}
+.title {
+  font-size: 40px;
+  line-height: 1.1;
+  color: var(--cobalt);
+  margin-top: var(--space-2);
+}
+.caption {
+  font-family: var(--font-utility);
+  margin: var(--space-2) 0 var(--space-4);
+}
