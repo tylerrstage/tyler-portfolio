@@ -29,6 +29,17 @@
   line-height: 0.98;
   color: var(--cobalt);
   letter-spacing: -0.02em;
+  /* Above the slab, so letters flying in from the intro are not covered by it. */
+  position: relative;
+  z-index: 1;
+}
+.line {
+  display: block;
+}
+/* Letters are only boxes while the intro flies them in; at rest they stay inline and kerned. */
+.name[data-flying] .letter {
+  display: inline-block;
+  transform-origin: 0 0;
 }
 .tagline {
   margin-top: var(--space-3);
@@ -97,6 +108,32 @@
 }
 .avatar {
   flex: none;
+}
+/* Entrance order (see .enter in global.css) */
+.dots {
+  --enter-y: 0;
+}
+.chip {
+  --i: 1;
+}
+.name {
+  --i: 2;
+}
+.tagline {
+  --i: 3;
+}
+.slab {
+  --i: 4;
+  --enter-y: 32px;
+}
+.ctas {
+  --i: 6;
+}
+.stats {
+  --i: 7;
+}
+.avatar {
+  --i: 7;
 }
 .slab :focus-visible {
   outline-color: var(--panel);

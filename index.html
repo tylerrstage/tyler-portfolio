@@ -9,6 +9,19 @@
       content="Tyler Stageberg: CS student at OU. Web, AI, and the occasional hackathon."
     />
     <title>Tyler Stageberg | Portfolio</title>
+    <script>
+      // Decide before first paint whether the intro plays, so the grid it draws in never
+      // flashes first. The flag name matches FLAG in src/components/DropIntro/DropIntro.tsx.
+      (function () {
+        var play = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        try {
+          play = play && sessionStorage.getItem('intro-played') === null;
+        } catch (e) {
+          // Storage is optional; without it the intro simply plays on each load.
+        }
+        document.documentElement.dataset.intro = play ? 'pending' : 'done';
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -74,20 +74,22 @@ The look is cobalt line art on textured off-white, using the saturated blue from
 
 ## Opening animation
 
-A water drop falls onto a glossy blue surface, ripples spread, and the ripples resolve into the name TYLER STAGEBERG, all in about 1.9 seconds. Only the name appears.
+A water drop falls onto a glossy blue surface, ripples spread, and the ripples resolve into the name TYLER STAGEBERG, all in about 1.9 seconds. Only the name appears. The intro has no background of its own: it plays on the real page background, which it draws in and leaves behind.
 
-1. **0.0 to 0.5 s:** A blank paper-colored screen. A cobalt drop falls from top center and stretches slightly as it speeds up.
+1. **0.0 to 0.5 s:** The page's paper and grain, with no grid yet. A cobalt drop falls from top center and stretches slightly as it speeds up.
 2. **0.5 s:** The drop hits a thin glossy line at about 60% of the screen height. A mirrored, slightly blurred reflection flashes below the line.
 3. **0.5 to 1.3 s:** Three concentric elliptical rings expand along the surface and fade, each with a faint cyan edge.
-4. **1.1 to 1.7 s:** Blueprint grid lines draw in across the screen and the name appears in the display font, as if developed from the ripple.
-5. **1.7 to 1.9 s:** The overlay lifts. The hero is already rendered underneath.
+4. **1.1 to 1.7 s:** The page's own blueprint grid draws in from the center and stays, and the name appears in the display font, as if developed from the ripple.
+5. **1.9 to 3.0 s:** The intro's drawings fade out while the page content enters. The name's letters fly from the intro's single centered line to their places in the two-line hero name, one after another (0.8 s each, 25 ms apart). If the intro is skipped, the hero name uses the regular entrance instead.
+
+**Page entrance.** At the handoff the navbar slides down and the hero pieces rise in with a short stagger (status chip, name, tagline, slab, buttons, stats, avatar), followed by the sections. The same entrance plays on loads where the intro is skipped for the session; under reduced motion everything is simply shown.
 
 **Rules**
 
 - Plays once per browser session, tracked with a sessionStorage flag inside try/catch.
 - Any click, key press, or scroll skips it immediately.
 - Skipped entirely when the visitor prefers reduced motion.
-- The page behind it is fully rendered, so the animation never delays content.
+- The page behind it is fully rendered in the DOM; it is only visually held back until the handoff.
 - The overlay is aria-hidden and removed from the DOM when it ends.
 - Built with SVG and CSS keyframes (Canvas 2D only if the ripples need it). No animation library.
 

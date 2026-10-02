@@ -9,7 +9,7 @@ interface Props {
 
 export default function SectionFrame({ id, sheet, children }: Props) {
   return (
-    <section id={id} className={styles.section} aria-labelledby={`${id}-title`}>
+    <section id={id} className={`enter ${styles.section}`} aria-labelledby={`${id}-title`}>
       <div className={styles.sheet}>
         <i className={`${styles.corner} ${styles.tl}`} aria-hidden="true" />
         <i className={`${styles.corner} ${styles.tr}`} aria-hidden="true" />

@@ -9,6 +9,7 @@
   padding: 0 var(--space-4);
   background: var(--paper);
   border-bottom: var(--line);
+  --enter-y: -100%;
 }
 .mark {
   font-family: var(--font-display);

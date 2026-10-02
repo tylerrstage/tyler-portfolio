@@ -33,7 +33,7 @@ export default function App() {
         <ResumeView />
         <Contact />
       </main>
-      <footer className="footer">
+      <footer className="footer enter">
         <div className="stripes" aria-hidden="true" />
         <p>
           <span>{ui.footer}</span>

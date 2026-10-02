@@ -2,25 +2,34 @@
 import Avatar from '../Avatar/Avatar';
 import styles from './Hero.module.css';
 
+const nameLines = profile.name.split(' ');
+
 export default function Hero() {
   return (
     <section id="top" className={styles.hero} aria-label="Introduction">
       <div className={styles.upper}>
-        <div className={`halftone ${styles.dots}`} aria-hidden="true" />
+        <div className={`halftone enter ${styles.dots}`} aria-hidden="true" />
         <div className={styles.inner}>
-          <p className={styles.chip}>{hero.status}</p>
-          <h1 className={styles.name}>
-            Tyler
-            <br />
-            Stageberg
+          <p className={`enter ${styles.chip}`}>{hero.status}</p>
+          {/* One span per letter so the intro can fly them in (see DropIntro). */}
+          <h1 className={`enter ${styles.name}`} aria-label={profile.name}>
+            {nameLines.map((line) => (
+              <span key={line} className={styles.line} aria-hidden="true">
+                {[...line].map((ch, i) => (
+                  <span key={i} className={styles.letter} data-name-letter>
+                    {ch}
+                  </span>
+                ))}
+              </span>
+            ))}
           </h1>
-          <p className={styles.tagline}>{profile.tagline}</p>
+          <p className={`enter ${styles.tagline}`}>{profile.tagline}</p>
         </div>
       </div>
-      <div className={styles.slab}>
+      <div className={`enter ${styles.slab}`}>
         <div className={`${styles.inner} ${styles.slabInner}`}>
           <div>
-            <div className={styles.ctas}>
+            <div className={`enter ${styles.ctas}`}>
               <a className={styles.primary} href="#projects">
                 {hero.primaryCta}
               </a>
@@ -28,7 +37,7 @@ export default function Hero() {
                 {hero.secondaryCta}
               </a>
             </div>
-            <ul className={styles.stats}>
+            <ul className={`enter ${styles.stats}`}>
               {hero.stats.map((s) => (
                 <li key={s.value + s.label}>
                   <strong>{s.value}</strong>
@@ -37,7 +46,7 @@ export default function Hero() {
               ))}
             </ul>
           </div>
-          <div className={styles.avatar}>
+          <div className={`enter ${styles.avatar}`}>
             <Avatar />
           </div>
         </div>

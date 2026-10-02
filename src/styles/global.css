@@ -76,6 +76,28 @@ section[id] {
   top: 8px;
 }
 
+/* Page entrance: elements rise in, staggered by --i, once the intro hands over.
+   While the intro runs they sit paused on their hidden first frame. */
+.enter {
+  animation: enter 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 80ms);
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--enter-y, 16px));
+  }
+}
+html[data-intro='pending'] .enter,
+html[data-intro='playing'] .enter {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation: none;
+  }
+}
+
 /* Shared blueprint pieces */
 .chips {
   display: flex;
@@ -181,6 +203,8 @@ section[id] {
 
 .footer {
   margin-top: var(--space-6);
+  --i: 8;
+  --enter-y: 0;
 }
 .footer p {
   display: flex;

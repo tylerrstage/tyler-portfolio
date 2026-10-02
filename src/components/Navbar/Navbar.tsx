@@ -8,7 +8,7 @@ const ids = navLinks.map((l) => l.id);
 export default function Navbar() {
   const active = useActiveSection(ids);
   return (
-    <header className={styles.header}>
+    <header className={`enter ${styles.header}`}>
       <a className={styles.mark} href="#top">
         {profile.name}
       </a>
