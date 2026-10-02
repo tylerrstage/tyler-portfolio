@@ -1,27 +1,18 @@
 ﻿import { useEffect, useState } from 'react';
 
+/** The section currently crossing a thin line 30% down the viewport. */
 export function useActiveSection(ids: string[]): string | null {
   const [active, setActive] = useState<string | null>(null);
   useEffect(() => {
-    const visible = new Map<string, number>();
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
-          if (e.isIntersecting) visible.set(e.target.id, e.intersectionRatio);
-          else visible.delete(e.target.id);
+          const id = e.target.id;
+          if (e.isIntersecting) setActive(id);
+          else setActive((cur) => (cur === id ? null : cur));
         }
-        let best: string | null = null;
-        let bestRatio = 0;
-        for (const id of ids) {
-          const r = visible.get(id) ?? 0;
-          if (r > bestRatio) {
-            best = id;
-            bestRatio = r;
-          }
-        }
-        setActive(best);
       },
-      { rootMargin: '-56px 0px -40% 0px', threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
+      { rootMargin: '-30% 0px -69% 0px', threshold: 0 },
     );
     for (const id of ids) {
       const el = document.getElementById(id);

@@ -71,67 +71,13 @@
   margin: var(--space-2) 0 var(--space-3);
   font-weight: 600;
 }
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: var(--space-3);
-}
-.chips li {
-  font-family: var(--font-utility);
-  font-size: 13px;
-  padding: 1px 8px;
-  border: 1px solid var(--cobalt);
-}
 .bullets {
-  display: grid;
-  gap: var(--space-2);
   font-size: 15px;
-  margin-bottom: var(--space-3);
-}
-.bullets li {
-  position: relative;
-  padding-left: 20px;
-}
-.bullets i {
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 9px;
-  height: 9px;
-  background: var(--red);
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-}
-.bullets li:nth-child(2) i {
-  background: var(--yellow);
-}
-.bullets li:nth-child(3) i {
-  background: var(--green);
+  margin: var(--space-3) 0;
 }
 .actions {
   display: flex;
   gap: var(--space-2);
-  margin-top: auto;
-}
-.gh,
-.reboot {
-  font-family: var(--font-utility);
-  font-size: 15px;
-  padding: 6px 16px;
-  border: 2px solid var(--ink);
-  text-decoration: none;
-}
-.gh {
-  background: var(--ink);
-  color: var(--panel);
-}
-.reboot {
-  background: var(--panel);
-  color: var(--ink);
-}
-.reboot:disabled {
-  opacity: 0.5;
 }
 .boot {
   position: absolute;
@@ -185,5 +131,23 @@
   .filling {
     animation: none;
     width: 100%;
+  }
+}
+.pixels {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+.pixels i {
+  background: var(--ink);
+  box-shadow: 0 0 0 0.5px var(--ink);
+  animation: pixelOut 1ms steps(1, end) forwards;
+}
+@keyframes pixelOut {
+  to {
+    opacity: 0;
   }
 }

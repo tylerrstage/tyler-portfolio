@@ -1,4 +1,5 @@
-﻿import styles from './Avatar.module.css';
+﻿import { ui } from '../../data/content';
+import styles from './Avatar.module.css';
 
 interface Props {
   photoSrc?: string;
@@ -9,7 +10,7 @@ export default function Avatar({ photoSrc }: Props) {
     <figure className={styles.frame}>
       <div className={styles.topbar}>
         <span className={styles.dot} aria-hidden="true" />
-        <span>Connected</span>
+        <span>{ui.connected}</span>
       </div>
       <div className={styles.screen}>
         {photoSrc ? (

@@ -1,4 +1,5 @@
 ﻿import { useEffect, useState } from 'react';
+import { ui } from '../../data/content';
 import styles from './StatusBar.module.css';
 
 function timeString() {
@@ -14,7 +15,7 @@ export default function StatusBar() {
   return (
     <div className={styles.bar}>
       <span className={styles.dot} aria-hidden="true" />
-      <span>Connected</span>
+      <span>{ui.connected}</span>
       <span className={styles.clock}>{time}</span>
     </div>
   );

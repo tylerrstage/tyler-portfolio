@@ -1,0 +1,31 @@
+﻿.rows {
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.rows li {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+.rows li + li {
+  border-top: 1.5px dashed var(--cobalt);
+}
+.label {
+  font-family: var(--font-utility);
+  color: var(--cobalt);
+}
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  user-select: all;
+}
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+.actions button {
+  min-width: 84px;
+}

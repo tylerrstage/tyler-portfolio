@@ -146,3 +146,37 @@ export const hero = {
   ],
 };
 
+export const about = {
+  bio: "I'm a computer science student at the University of Oklahoma, expected to graduate in May 2028. I build full-stack web apps and AI-powered tools. At Hacklahoma I work on a multi-developer team using GitLab merge requests and a documented ticket workflow.",
+};
+
+export const ui = {
+  skip: 'Skip to content',
+  connected: 'Connected',
+  github: 'GitHub',
+  linkedin: 'LinkedIn',
+  email: 'Email',
+  reboot: 'Reboot',
+  featured: 'Featured',
+  online: 'Online',
+  screenshotPending: 'Screenshot pending',
+  downloadPdf: 'Download PDF',
+  copy: 'Copy',
+  copied: 'Copied',
+  open: 'Open',
+  gpa: 'GPA',
+  expected: 'Expected',
+  honors: 'Honors',
+  coursework: 'Relevant coursework',
+  educationWindow: 'education.sys',
+  experienceWindow: 'experience.log',
+  resumeWindow: 'Tyler_Stageberg_Resume.pdf',
+  resumeHeadings: {
+    education: 'Education',
+    experience: 'Relevant Experience',
+    projects: 'Projects',
+    skills: 'Technical Skills',
+  },
+  footer: 'Tyler Stageberg · Norman, OK',
+  backToTop: 'Back to top',
+};

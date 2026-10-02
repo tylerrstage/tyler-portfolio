@@ -1,0 +1,62 @@
+﻿.desk {
+  padding: var(--space-5) var(--space-4);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(44, 107, 242, 0.08) 0 2px,
+    transparent 2px 10px
+  );
+}
+.sheet {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 44px 52px;
+  background: #fff;
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(14, 36, 104, 0.25);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.top {
+  text-align: center;
+}
+.name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: var(--ink);
+}
+.links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: 4px;
+}
+.links a {
+  color: var(--ink);
+}
+.sheet h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  margin: 18px 0 6px;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--ink);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.sheet ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 4px 0 0;
+}
+.sheet li {
+  margin-bottom: 2px;
+}
+.entry + .entry {
+  margin-top: 8px;
+}

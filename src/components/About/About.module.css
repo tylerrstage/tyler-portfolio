@@ -1,0 +1,46 @@
+﻿.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+.bio {
+  font-size: 19px;
+  line-height: 1.65;
+}
+.edu {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+.edu h3 {
+  font-size: 20px;
+  color: var(--cobalt);
+}
+.place {
+  font-family: var(--font-utility);
+  font-size: 14px;
+}
+.degree {
+  font-weight: 600;
+  margin-top: var(--space-2);
+}
+.facts {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-3) 0;
+  padding: var(--space-2) 0;
+  border-top: 1.5px dashed var(--cobalt);
+  border-bottom: 1.5px dashed var(--cobalt);
+}
+.facts dt,
+.label {
+  font-family: var(--font-utility);
+  font-size: 13px;
+  color: var(--cobalt);
+}
+.facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+.label {
+  margin-bottom: var(--space-2);
+}

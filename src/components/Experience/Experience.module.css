@@ -1,0 +1,36 @@
+﻿.body {
+  padding: var(--space-4);
+}
+.head {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.head h3 {
+  font-size: 22px;
+  color: var(--cobalt);
+}
+.org {
+  font-weight: 600;
+}
+.dates {
+  font-family: var(--font-utility);
+  font-size: 14px;
+}
+.ring {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cobalt);
+  background: radial-gradient(
+    circle,
+    var(--cobalt) 0 4px,
+    transparent 5px 12px,
+    var(--cobalt) 12px 13.5px,
+    transparent 14px 20px,
+    var(--cobalt) 20px 21.5px,
+    transparent 22px
+  );
+}

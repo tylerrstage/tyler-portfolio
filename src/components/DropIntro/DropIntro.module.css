@@ -1,0 +1,177 @@
+﻿.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: var(--paper);
+  animation: lift 0.2s ease-in 1.7s forwards;
+}
+@keyframes lift {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* 0.0 - 0.5s: the drop falls and stretches */
+.drop {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 20px;
+  height: 30px;
+  margin-left: -10px;
+  fill: var(--cobalt);
+  transform-origin: 50% 100%;
+  animation:
+    fall 0.5s cubic-bezier(0.55, 0, 1, 0.45) forwards,
+    vanish 1ms linear 0.5s forwards;
+}
+@keyframes fall {
+  from {
+    transform: translateY(-40px) scaleY(1);
+  }
+  to {
+    transform: translateY(calc(60vh - 30px)) scaleY(1.4);
+  }
+}
+@keyframes vanish {
+  to {
+    opacity: 0;
+  }
+}
+
+/* The glossy surface line at 60% */
+.surface {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60vh;
+  height: 2px;
+  opacity: 0.7;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cobalt) 30%,
+    var(--cyan) 50%,
+    var(--cobalt) 70%,
+    transparent
+  );
+}
+
+/* 0.5s: mirrored reflection flash */
+.reflection {
+  position: absolute;
+  left: 50%;
+  top: calc(60vh + 2px);
+  width: 20px;
+  height: 46px;
+  margin-left: -10px;
+  border-radius: 0 0 50% 50%;
+  opacity: 0;
+  filter: blur(3px);
+  transform-origin: 50% 0;
+  background: linear-gradient(var(--cobalt), transparent);
+  animation: flash 0.4s ease-out 0.48s;
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.2);
+  }
+  30% {
+    opacity: 0.75;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1.3);
+  }
+}
+
+/* 0.5 - 1.3s: three elliptical rings */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 60vh;
+  width: 70vw;
+  height: 10vw;
+  margin: -5vw 0 0 -35vw;
+  border-radius: 50%;
+  border: 5px solid var(--cobalt);
+  box-shadow:
+    0 0 0 1.5px rgba(70, 198, 242, 0.55),
+    inset 0 0 0 1.5px rgba(70, 198, 242, 0.35);
+  opacity: 0;
+  transform: scale(0);
+  animation: ripple 0.56s ease-out forwards;
+}
+.ring:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+.ring:nth-of-type(5) {
+  animation-delay: 0.62s;
+}
+.ring:nth-of-type(6) {
+  animation-delay: 0.74s;
+}
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0.02);
+  }
+  65% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* 1.1 - 1.7s: grid draws in, name develops out of the ripple */
+.grid {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 50%);
+  animation: draw 0.6s ease-out 1.1s forwards;
+  background-image:
+    linear-gradient(rgba(44, 107, 242, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 107, 242, 0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+@keyframes draw {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60vh;
+  text-align: center;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(36px, 6.4vw, 96px);
+  line-height: 1;
+  color: var(--cobalt);
+  opacity: 0;
+  animation: develop 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 1.1s forwards;
+}
+@keyframes develop {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    letter-spacing: 0.3em;
+    transform: translateY(-50%) scaleY(0.25);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    letter-spacing: -0.02em;
+    transform: translateY(-125%) scaleY(1);
+  }
+}
