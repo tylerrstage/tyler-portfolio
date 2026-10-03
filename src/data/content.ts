@@ -58,7 +58,9 @@ export const projects: Project[] = [
       'Shipped a full-stack React/FastAPI app, returning fit-score reports and suggestions in one request.',
       'Developed a custom tokenizer and readability scorer to evaluate resume clarity and wording.',
     ],
-    screenshot: '/projects/gethired.png',
+    screenshot: '/projects/gethired.webp',
+    screenshotAlt:
+      'GetHired upload screen: a resume drop zone, a target job description field, and an Analyze Resume button.',
     repoUrl: 'https://github.com/tylerrstage/get-hired-ai',
   },
   {

@@ -104,7 +104,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {imgOk ? (
             <img
               src={project.screenshot}
-              alt={`Screenshot of the ${project.title} project`}
+              alt={project.screenshotAlt ?? `Screenshot of the ${project.title} project`}
               loading="lazy"
               onError={() => setImgOk(false)}
             />

@@ -34,6 +34,7 @@ export interface Project {
   stack: string[];
   bullets: string[];
   screenshot: string;
+  screenshotAlt?: string;
   repoUrl: string;
 }
 export interface SkillGroup {
