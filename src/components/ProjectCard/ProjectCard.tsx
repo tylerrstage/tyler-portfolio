@@ -100,11 +100,22 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className={styles.body}>
-        <div className={styles.shot}>
+        <div
+          className={styles.shot}
+          style={
+            project.screenshotSize && imgOk
+              ? {
+                  aspectRatio: `${project.screenshotSize.width} / ${project.screenshotSize.height}`,
+                }
+              : undefined
+          }
+        >
           {imgOk ? (
             <img
               src={project.screenshot}
               alt={project.screenshotAlt ?? `Screenshot of the ${project.title} project`}
+              width={project.screenshotSize?.width}
+              height={project.screenshotSize?.height}
               loading="lazy"
               onError={() => setImgOk(false)}
             />

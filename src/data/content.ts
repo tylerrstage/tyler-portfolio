@@ -59,6 +59,7 @@ export const projects: Project[] = [
       'Developed a custom tokenizer and readability scorer to evaluate resume clarity and wording.',
     ],
     screenshot: '/projects/gethired.webp',
+    screenshotSize: { width: 1600, height: 754 },
     screenshotAlt:
       'GetHired upload screen: a resume drop zone, a target job description field, and an Analyze Resume button.',
     repoUrl: 'https://github.com/tylerrstage/get-hired-ai',

@@ -35,6 +35,8 @@ export interface Project {
   bullets: string[];
   screenshot: string;
   screenshotAlt?: string;
+  /** Pixel size of the screenshot file, so its frame matches it before it loads. */
+  screenshotSize?: { width: number; height: number };
   repoUrl: string;
 }
 export interface SkillGroup {
